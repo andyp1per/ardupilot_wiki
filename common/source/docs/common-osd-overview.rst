@@ -63,7 +63,6 @@ The options are:
 - 2 = toggles screens on a low to high transition of set RC channel. keeps toggling to next screen every 1s while channel value is kept high
 
 
-
 Panel items
 ===========
 
@@ -85,6 +84,27 @@ Several user defined warnings can be set which will flash the respective osd pan
 - ``OSD_W_BATVOLT`` - Blinks battery voltage panel if less than this value. 0-100V with up tenth volt precision
 - ``OSD_W_RSSI`` - Blinks rssi panel if less than this integet percentage value. 0-99%
 - ``OSD_W_NSAT`` - Blinks #Sat panel if less than this number. 0-30
+
+Parameter panels
+================
+
+Starting with ArduPilot 4.1, in addition to the runtime flight panels a set of two parameter panels are available enabling users to modify any parameters using radio transmitter stick gestures.
+
+Setup
+=====
+
+Set ``OSD5_ENABLE`` or `` OSD6_ENABLE`` to enable either of the parameter screens. These panels can be accessed just like any other OSD panel.
+
+OSD menu control
+================
+
+A big part of the parameter panel feature is support for the OSD menu. Once in the menu, the Pitch stick will allow you to navigated between menu items and Roll right will usually allow you to select items or navigate into sub-menus. The OSD menu can only be entered while disarmed.
+
+The transmitter sticks can be used to control the OSD menu as follows:
+
+.. image:: ../../../images/camera-control-stick-commands.png
+    :target:  ../_images/camera-control-stick-commands.png
+    :width: 450px
 
 Testing OSD with SITL
 =====================
